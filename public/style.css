@@ -1,0 +1,121 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a0a23;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+/* Nav links default */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Hide menu button on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: ease-in;
+}
+
+/* Responsive mode */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+.result-box,.scan-box {
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.8);
+  max-width: 100%;
+  max-height: 15em;
+  display: -webkit-box;
+  -webkit-line-clamp: 10; 
+  line-clamp: 10;  /* limit to 10 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;         /* hide extra lines */
+  text-overflow: ellipsis;
+  line-height: 1.5em; 
+  word-wrap: break-word;   
+  overflow-wrap: break-word; 
+  white-space: pre-wrap;
+}
+#resultBox {
+  background-color: #111;
+  color: #d4d4d4;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 10; 
+  line-clamp: 10;  /* limit to 10 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;         /* hide extra lines */
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 15em;
+  max-height: 500px; /* Limit height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #000; /* Text should be visible */
+  background-color: transparent; /* White background */
+}
+
+input[type="text"]::placeholder {
+  color: #888; /* Placeholder visible */
+}
+
+
+@media print{
+    .scan-box{
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
+}
+
+/* Button Styles */
+button {  
+  background-color: #00bcd4;  
+  color: white;  
+  padding: 10px 20px;  
+  border: none;  
+  border-radius: 8px;  
+  cursor: pointer;  
+  font-size: 16px;  
+  transition: background-color 0.3s ease;  
+}

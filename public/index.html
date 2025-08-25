@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberGuard • Cybersecurity for Everyone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmCULaMxtu1+rQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l+DQg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/style.css"/>
+  <style>
+    html,body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.12); }
+    .gradient { background: radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,0.25), transparent 60%), radial-gradient(1200px 600px at 110% 10%, rgba(16,185,129,0.25), transparent 60%); }
+  </style>
+</head>
+
+
+<body class="bg-slate-950 text-slate-100 gradient min-h-screen">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-blue-500 flex items-center justify-center font-extrabold">C</div>
+        <div>
+          <h1 class="text-lg font-extrabold tracking-tight">CyberBhai</h1>
+          <p class="text-xs text-slate-400 -mt-1">Cybersecurity for Everyone</p>
+        </div>
+      </div>
+      <nav id="nav-links" class="nav-links">
+        <a href="#highlights" class="hover:text-green-300 px-2.5 py-1.5">Highlights</a>
+        <a href="#checklist" class="hover:text-green-300 px-2.5 py-1.5">Checklist</a>
+        <a href="#chat" class="hover:text-green-300 px-2.5 py-1.5">Chatbot</a>
+        <a href="https://cybercrime.gov.in/" target="_blank" class="rounded-lg px-3 py-1.5 bg-green-500/10 text-green-300 hover:bg-green-500/20">Report Fraud</a>
+      </nav>
+       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pb-24">
+    <!-- Hero -->
+    <section class="pt-12 md:pt-20">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Stay Safe Online — <span class="text-blue-400">Students</span>, <span class="text-emerald-400">Teachers</span>, <span class="text-fuchsia-400">Rural Users</span>, <span class="text-amber-400">Admins</span>.</h2>
+          <p class="mt-4 text-slate-300">One hub for social media safety, phishing awareness, and instant help via AI.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#chat" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500">Ask the AI</a>
+            <a href="#highlights" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20">See Highlights</a>
+          </div>
+          <div class="mt-6 text-xs text-slate-400">Built with Node.js • Tailwind • Gemini API</div>
+        </div>
+        <div class="glass rounded-2xl p-4 border-white/5">
+          <img src="https://i.ibb.co/7dTHBDMX/Cyberbhai.jpg" alt="Cyberbhai" class="rounded-xl object-cover w-full h-54 md:h-80">
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- Nmap Scan Section -->
+<div id="report_pdf" class="mt-16 glass rounded-2xl p-6 border-white/10" >
+  <section>
+    <h3 class="text-2xl font-bold">Run Nmap Scan</h2>
+        <input type="text" id="ipInput" placeholder="Enter IP address">
+        <button class="p-3 rounded-lg bg-blue-600 hover:bg-blue-500" onclick="runNmap()">Scan</button>
+        <div id="resultBox" class="scan-box">
+        <h2>Results will appear here</h2>
+        </div>
+  </section>
+        <button onclick="printReport()" class="mt-16 glass rounded-2xl p-6" >Download PDF</button>
+</div>
+
+<!-- Highlights -->
+  <section id="highlights" class="mt-16">
+  <div class="flex items-baseline justify-between">
+    <h3 class="text-2xl font-bold">Social Media Safety Highlights</h3>
+      <div class="text-xs text-slate-400">Auto-refreshes</div>
+      </div>
+  <div id="highlights-grid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+    <!-- Checklist -->
+    <section id="checklist" class="mt-16">
+      <h3 class="text-2xl font-bold">Quick Safety Checklist</h3>
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-4">
+          <h4 class="font-semibold mb-2">For Everyone</h4>
+          <ul class="text-slate-300 list-disc list-inside space-y-1">
+            <li>Use a password manager & enable 2FA</li>
+            <li>Think before you click (verify the domain)</li>
+            <li>Keep OS and apps updated</li>
+            <li>Limit public info and app permissions</li>
+          </ul>
+        </div>
+        <div class="glass rounded-xl p-4">
+          <h4 class="font-semibold mb-2">Admins </h4>
+          <ul class="text-slate-300 list-disc list-inside space-y-1">
+            <li>Enforce EDR, patching, and disk encryption</li>
+            <li>SSH keys only, disable password auth</li>
+            <li>Backups 3-2-1 with restore tests</li>
+            <li>Threat intel & phishing simulations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat -->
+    <section id="chat" class="mt-16">
+      <div class="glass rounded-2xl p-6">
+        <div class="flex items-center justify-between gap-2">
+          <h3 class="text-2xl font-bold">Ask CyberBhai</h3>
+          <span id="status" class="text-xs text-slate-400">Ready</span>
+        </div>
+        <div class="mt-4 grid md:grid-cols-[1fr,320px] gap-4">
+          <div>
+            <div id="chatlog" class="h-72 overflow-y-auto space-y-3 pr-1">
+              <!-- messages injected here -->
+            </div>
+            <form id="chat-form" class="mt-4 flex gap-2" autocomplete="off">
+              <input id="chat-input" class="flex-1 rounded-lg bg-white/5 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ask about phishing, privacy, or security..." />
+              <button class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500">Send</button>
+            </form>
+          </div>
+          <aside class="space-y-2">
+            <div class="glass rounded-xl p-3 text-sm text-slate-300">
+              <div class="font-semibold text-slate-200 mb-1">Try:</div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>“Is this link safe: http://paypa1.com/login”</li>
+                <li>"Rate my password: 'Abcd@123" </li>
+                <li>“Admin Steps to enforce 2FA in my org”</li>
+              </ul>
+            </div>
+            <div class="glass rounded-xl p-3 text-xs text-slate-400">
+              Feel free to ask your questions about online safety, privacy, or cybersecurity. CyberBhai is here to help you stay secure!
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-10 text-center text-slate-400 text-sm">
+      © <span id="year"></span> CyberBhai — Built for learning. Not a substitute for professional incident response.
+    </div>
+  </footer>
+
+
+
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libbs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "platform": "Instagram",
+    "icon": "\ud83d\udcf8",
+    "updated": "2025-08-01",
+    "summary": "Secure your account, avoid phishing via DMs, and watch for login alerts.",
+    "tips": [
+      "Enable 2FA (Authenticator app preferred)",
+      "Review active logins and revoke unknown sessions",
+      "Beware of verification scams in DMs"
+    ],
+    "link": "https://help.instagram.com/369001149843369"
+  },
+  {
+    "platform": "WhatsApp",
+    "icon": "\ud83d\udcac",
+    "updated": "2025-08-01",
+    "summary": "Secure backups and prevent account takeovers.",
+    "tips": [
+      "Turn on two-step verification (PIN)",
+      "Enable end-to-end encrypted backups",
+      "Do not share OTP with anyone"
+    ],
+    "link": "https://faq.whatsapp.com/"
+  },
+  {
+    "platform": "Telegram",
+    "icon": "\u2708\ufe0f",
+    "updated": "2025-08-01",
+    "summary": "Private chats are not default; enable extra protections.",
+    "tips": [
+      "Use Secret Chats for end-to-end encryption",
+      "Set a local passcode and enable 2FA",
+      "Disable link previews for unknown sources"
+    ],
+    "link": "https://telegram.org/faq"
+  },
+  {
+    "platform": "Facebook",
+    "icon": "\ud83d\udcd8",
+    "updated": "2025-08-01",
+    "summary": "Strong privacy settings and login approvals are key.",
+    "tips": [
+      "Enable 2FA and login alerts",
+      "Limit public profile info",
+      "Regularly review connected apps"
+    ],
+    "link": "https://www.facebook.com/help/799880743466869"
+  },
+  {
+    "platform": "X (Twitter)",
+    "icon": "\ud83d\udc26",
+    "updated": "2025-08-01",
+    "summary": "Beware of impersonation and crypto scams.",
+    "tips": [
+      "Turn on 2FA (prefer app-based)",
+      "Verify handles and domains before clicking",
+      "Lock down DMs or filter messages"
+    ],
+    "link": "https://help.x.com/en"
+  },
+  {
+    "platform": "YouTube",
+    "icon": "\u25b6\ufe0f",
+    "updated": "2025-08-01",
+    "summary": "Account takeovers target creators via fake brand deals.",
+    "tips": [
+      "Enable 2FA and use a hardware key if possible",
+      "Do not run unknown .exe from email sponsors",
+      "Check brand domains carefully"
+    ],
+    "link": "https://support.google.com/youtube/answer/10470810"
+  }
+]
